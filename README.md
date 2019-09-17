@@ -14,7 +14,7 @@ EA模型的第一步Extractive Model有两个缺点：信息损失和用户偏�
 
 ### 方法
 **Condense Model**
-输入是N篇评论文档，一篇文档有M个词（每篇文档词的个数不一样），记为X={w_1,w_2,...,w_M}，通过一些预训练好的语言模型将这些词编码成词向量，通过Condense Model可以输出每篇文档的文档编码d，和词编码h_1,h_2,...,h_M
+输入是N篇评论文档，一篇文档有M个词（每篇文档词的个数不一样），记为![](http://latex.codecogs.com/gif.latex?\\X=(w_1,w_2,...,w_M))，通过一些预训练好的语言模型将这些词编码成词向量，通过Condense Model可以输出每篇文档的文档编码d，和词编码![](http://latex.codecogs.com/gif.latex?\\h_1,h_2,...,h_M))
 
 
 
