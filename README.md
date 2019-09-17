@@ -16,7 +16,14 @@ EA模型的第一步Extractive Model有两个缺点：信息损失和用户偏�
 **Condense Model**
 输入是N篇评论文档，一篇文档有M个词（每篇文档词的个数不一样），记为![](http://latex.codecogs.com/gif.latex?X=(w_1,w_2,...,w_M))，通过一些预训练好的语言模型将这些词编码成词向量，通过Condense Model可以输出每篇文档的文档编码d，和词编码![](http://latex.codecogs.com/gif.latex?h_1,h_2,...,h_M))。<br>
 第一步：Bi-LSTM编码得到d和h
-
+![](image/2.jpg)
+其中![](http://latex.codecogs.com/gif.latex?\overrightharpoon{h_i})和![](http://latex.codecogs.com/gif.latex?\overleftharpoon{h_i})分别是向前LSTM和向后LSTM的隐层态。<br>
+第二步：LSTM解码
+![](http://latex.codecogs.com/gif.latex?z_0=d)
+![](image/3.jpg)
+其中词![](http://latex.codecogs.com/gif.latex?{w_t}')是由softmax生成的
+第三步：损失函数
+![](image/4.jpg)
 
 
 
